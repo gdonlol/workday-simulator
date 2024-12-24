@@ -1,0 +1,308 @@
+.text-input {
+  font-family: Roboto;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #7b858f;
+  transition: border-color 0.5s ease, outline 0.5s ease;
+  padding: 0px 8px 0px 8px;
+  margin-bottom: 4px;
+  color: #494949;
+}
+
+.text-input:hover {
+  border-color: black;
+}
+
+.text-input:focus {
+  border-color: #7cabdc;
+  outline-color: #7cabdc;
+}
+
+label {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 18px 0px 4px 0px;
+  color: #494949;
+}
+
+.signin-panel .form-error li,
+.signin-panel .form-error p,
+.form-error p {
+  color: #f54242;
+  font-size: 12px;
+  margin: 0;
+}
+
+.form-error p {
+  max-width: 340px;
+  margin-top: 8px;
+}
+
+.signin-panel .form-error ul {
+  margin: 0;
+  padding: 0px 0px 0px 40px;
+  list-style-type: "- ";
+}
+
+.form-container {
+  background-color: white;
+  box-shadow: 0px 0px 10px #00000069;
+  width: 1025px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 48px 32px 32px 32px;
+}
+
+.form-container a {
+  color: #005cb9;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-container h2 {
+  font-weight: 400;
+  color: #333333;
+  font-size: 20px;
+}
+
+.form-container h1 {
+  align-self: center;
+  font-size: 24px;
+  color: #333333
+}
+
+.form-container small {
+  color: #494949;
+}
+
+.form-footer {
+  position: sticky;
+  bottom: 0;
+  width: 1025px;
+  height: 80px;
+  background-color: white;
+  border-top: 1px solid #f1f2f3;
+  z-index: 99;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, rgba(196, 196, 196, 1) 98%, rgba(0, 0, 0, 0) 99%);
+  width: 85%;
+  height: 2.5px;
+  align-self: center;
+  margin-top: 22px;
+  justify-content: space-between;
+}
+
+.progress-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background-color: white;
+  border: 7px solid #127BD2;
+  text-wrap: nowrap;
+  position: relative;
+}
+
+.progress-dot span {
+  font-size: 13px;
+  transform: translateY(20px);
+  font-weight: 600;
+  color: #494949;
+}
+
+.checkmark::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: white;
+}
+
+.form-dropdown {
+  border: 1px solid #989DA2;
+  border-radius: 4px;
+  padding: 12px 3px 10px 8px;
+  width: 340px;
+  height: 42px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  transition: border-color 0.25s ease, outline 0.25s ease;
+}
+
+.form-dropdown p {
+  margin: 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.form-label {
+  margin: 4px 0px 4px 0px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333;
+}
+
+.form-dropdown-menu {
+  width: 340.09px;
+  /* this width is some voodoo ass shit */
+  border: 1px solid red;
+  outline: 2px solid red;
+  box-sizing: border-box;
+  border-top: none;
+  z-index: 10;
+  background-color: white;
+  transform: translateY(-3px);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+}
+
+.dropdown-options {
+  max-height: 25vh;
+  overflow-y: scroll;
+}
+
+.form-dropdown-option {
+  font-size: 14px;
+  margin: 0;
+  padding: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-dropdown-option:hover {
+  background-color: #E8EBED;
+}
+
+.dropdown-container {
+  width: 340px;
+  outline: none;
+}
+
+.dropdown-container:focus-within .form-dropdown {
+  outline-width: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* this is some scuffed ass shit ngl */
+.dropdown-hr {
+  width: 100%;
+  z-index: 11;
+  background-color: white;
+  height: 2px;
+  border-bottom: 1px solid #989DA2;
+  transform: translateY(-2px);
+}
+
+.form-container hr {
+  width: 100%;
+  color: #edf0f1;
+  border: 1px solid #edf0f1;
+  border-bottom: none;
+  margin-top: 32px;
+}
+
+.form-container h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+label.required::after {
+  content: " *";
+  color: #f54242;
+}
+
+.form-container input {
+  width: 340px;
+  height: 42px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  color: #333333;
+  border-radius: 4px;
+  border: 1px solid #989DA2;
+  padding-left: 8px;
+  outline-width: 0px;
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+/* i couldve done this solution for buttons but im too lazy to change it now */
+.form-container input:focus {
+  outline-width: 3px;
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.form-container .review p {
+  margin: 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.form-container .review label {
+  font-size: 15px;
+}
+
+.upload-container {
+  height: 162px;
+  border: 1px dashed #ced3d9;
+  border-radius: 4px;
+  margin: 8px 0px 28px 0px;
+  background-color: #f6f7f8;
+  cursor: pointer;
+}
+
+.upload-container b {
+  color: #333333;
+  margin: 8px 0px 0px 0px;
+  font-weight: 500;
+}
+
+.upload-container p {
+  margin: 8px;
+  font-size: 14px;
+  color: #5e6a75;
+}
+
+
+.upload-container u {
+  font-weight: 600;
+}
+
+.upload-details {
+  padding-top: 12px;
+}
+
+.upload-details p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.animated-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #e1e1e1;
+  border-radius: 999px;
+  animation: bob 2s ease-in-out infinite;
+  transform: scale(0);
+}
+
+@keyframes bob {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
