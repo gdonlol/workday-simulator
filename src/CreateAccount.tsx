@@ -106,7 +106,7 @@ export const CreateAccount = (props: {
                 style={{ margin: "20px 0px 4px 0px" }}
               ><b>Create Account</b></button>
               <p style={{ alignSelf: "center" }}>Already have an account?
-                <Link to="../signin" style={{ color: props.pageColor }}> Sign In</Link>
+                <Link to="#" onClick={() => props.setGameState(1)} style={{ color: props.pageColor }}> Sign In</Link>
               </p>
               <Link to="#" style={{ alignSelf: "center", color: props.pageColor }}>Forgot your password?</Link>
 

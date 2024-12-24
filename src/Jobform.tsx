@@ -38,7 +38,7 @@ export const Jobform = (props: { pageColor: string, colorType: string }) => {
     criminalHistory: ["", ""]
   })
   const [resumeUp, setResumeUp] = useState(false)
-  const [progress, setProgress] = useState(4)
+  const [progress, setProgress] = useState(0)
 
   const updateErrorIndex = (
     stateObj: Record<string, string[]>,
@@ -128,6 +128,7 @@ export const Jobform = (props: { pageColor: string, colorType: string }) => {
   {/* no fucking idea why they made their navbar stickiness inconsistent */ }
   useEffect(() => {
     const navbar = document.getElementById("navbar")
+    window.scrollTo(0, 0)
     if (navbar) {
       navbar.style.position = "sticky"
       navbar.style.top = "0"

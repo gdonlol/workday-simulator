@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 function App() {
 
-  const [gameState, setGameState] = useState(3);
+  const [gameState, setGameState] = useState(0);
   const [pageColor, setPageColor] = useState("#000000");
   const [icon, setIcon] = useState("");
   const [banner, setBanner] = useState("");
@@ -17,7 +17,8 @@ function App() {
 
   useEffect(() => {
     const fetchJson = async () => {
-      const response = await fetch("/json/6.json");
+      const jsonRandom = Math.floor(Math.random() * 6) + 1;
+      const response = await fetch(`/json/${jsonRandom}.json`);
       const jsonData = await response.json();
       setPageColor(jsonData.color);
       setIcon(jsonData.icon);
