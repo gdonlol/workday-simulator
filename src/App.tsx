@@ -1,5 +1,6 @@
 import './css/Forms.css'
 import './css/App.css'
+import './css/Menu.css'
 import { Routes, Route } from 'react-router'
 import { Menu } from './Menu'
 import { GameDisplay } from './GameDisplay'
