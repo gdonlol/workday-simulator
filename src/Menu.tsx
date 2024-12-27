@@ -45,7 +45,7 @@ export const Menu = (props: {
                 props.setShowTimer(true)
                 window.setTimeout(() => {
                   props.setRunTimer(true)
-                  navigate("./game")
+                  navigate("/game")
                 }, 2000)
               }, 2000)
             }} className="btn yellow-btn"><span>Play</span></a>
@@ -86,7 +86,7 @@ export const Menu = (props: {
               props.setShowTimer(true)
               window.setTimeout(() => {
                 props.setRunTimer(true)
-                navigate("./game")
+                navigate("/game")
               }, 2000)
             }, 2000)
           }} className="btn yellow-btn"><span>Play again</span></a>
