@@ -50,7 +50,7 @@ export const Menu = (props: {
               }, 2000)
             }} className="btn yellow-btn"><span>Play</span></a>
           </div>
-          <div className="menu-div flex-col flex-jcc" style={{ marginTop: 64 }}>
+          <div className="menu-div flex-col flex-jcc" style={{ marginTop: 32 }}>
             <p style={{ marginTop: 0 }}>
               <span><b>how to play:</b></span> <br />
               <span>fill out the job application as fast as you can </span>
