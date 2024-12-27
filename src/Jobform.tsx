@@ -6,7 +6,11 @@ import { OtherQuestions } from "./OtherQuestions"
 import { VoluntaryDisclosures } from "./VoluntaryDisclosures"
 import { Review } from "./Review"
 
-export const Jobform = (props: { pageColor: string, colorType: string }) => {
+export const Jobform = (props: {
+  pageColor: string,
+  colorType: string,
+  updateScore: () => void
+}) => {
 
   const [infoState, setInfoState] = useState({
     heardFrom: ["", ""],
@@ -49,13 +53,11 @@ export const Jobform = (props: { pageColor: string, colorType: string }) => {
   ): boolean => {
     const k = stateKey as keyof typeof stateObj
     if (stateObj[k][0] === "" || !regex.test(stateObj[k][0])) {
-      console.log("failed: " + stateKey)
       setStateFn(old => {
         return ({ ...old, [stateKey]: [old[k][0], errorMsg] })
       })
       return true
     } else {
-      console.log("passed: " + stateKey)
       setStateFn(old => {
         return ({ ...old, [stateKey]: [old[k][0], ""] })
       })
@@ -130,7 +132,7 @@ export const Jobform = (props: { pageColor: string, colorType: string }) => {
     const navbar = document.getElementById("navbar")
     window.scrollTo(0, 0)
     if (navbar) {
-      navbar.style.position = "sticky"
+      navbar.style.position = "fixed"
       navbar.style.top = "0"
     }
 
@@ -172,9 +174,17 @@ export const Jobform = (props: { pageColor: string, colorType: string }) => {
       <div className="form-footer flex flex-aic" style={{ justifyContent: "flex-end" }}>
         <button
           className={`btn ${props.colorType}-btn`}
+          style={{ marginRight: 16 }}
+          onClick={() => { setProgress(old => Math.max(0, old - 1)) }}
+        ><b>Back</b></button>
+        <button
+          className={`btn ${props.colorType}-btn`}
           style={{ marginRight: 22 }}
-          onClick={() => { handleAdvance() }}
-        ><b>Save and Continue</b></button>
+          onClick={progress === 4 ?
+            () => { props.updateScore() }
+            :
+            () => { handleAdvance() }}
+        ><b>{progress === 4 ? "Submit" : "Save and Continue"}</b></button>
       </div>
 
     </div >

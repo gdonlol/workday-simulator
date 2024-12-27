@@ -52,7 +52,7 @@ export const Review = (props: {
 
       <hr />
       <h1>Voluntary Disclosures</h1>
-      <h3>Personal Information</h3>
+      <h3 style={{ color: props.pageColor }}>Personal Information</h3>
 
       <label>Select your gender.</label>
       <p>{props.personalInfoState.gender}</p>

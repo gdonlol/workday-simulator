@@ -26,10 +26,8 @@ export const CreateAccount = (props: {
     if (regexStates.write && regexStates.lowercase && regexStates.alphanumeric && regexStates.minLength &&
       regexStates.specialChar && regexStates.uppercase && regexStates.numeric &&
       regexStates.validEmail && regexStates.confMatch) {
-      console.log('all tests pass, switch gamestate to form')
       props.setGameState(3)
     } else {
-      console.log("a test has failed")
     }
   }, [regexStates])
 
@@ -100,7 +98,6 @@ export const CreateAccount = (props: {
               }
               <button className={`btn ${props.jobType}-btn`} onClick={e => {
                 e.preventDefault()
-                console.log("test")
                 checkForm()
               }}
                 style={{ margin: "20px 0px 4px 0px" }}

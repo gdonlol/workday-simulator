@@ -11,9 +11,12 @@ export const Joblist = (props: {
   jobType: string
 }) => {
 
-  const fakeId = (Math.random() * 100000).toFixed(0);
   const [showPanel, setShowPanel] = useState(false);
+  const [fakeId, setFakeId] = useState(() => {
+    return (Math.random() * 100000).toFixed(0);
+  });
 
+  {/* i lost the code in this comp and recovered it by copying the cached source in my browser and reformatting it with gpt, so some of it might look weird */ }
   return (
     <div style={{ position: "relative" }}>
 
@@ -26,7 +29,7 @@ export const Joblist = (props: {
             <a onClick={() => { props.setGameState(1) }} className={`btn ${props.jobType}-btn flex flex-jcc`} >Autofill with Resume</a>
             <a onClick={() => { props.setGameState(1) }} className={`btn ${props.jobType}-btn flex flex-jcc`} >Apply Manually</a>
             <hr />
-            <a onClick={() => { props.setGameState(1) }} className={`btn ${props.jobType}-btn flex flex-jcc`} >Autofill with Resume</a>
+            <a onClick={() => { props.setGameState(1) }} className={`btn ${props.jobType}-btn flex flex-jcc`} >Apply with LinkedIn</a>
             <hr />
           </div>
         </div>

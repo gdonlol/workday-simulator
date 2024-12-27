@@ -3,17 +3,27 @@ import { CreateAccount } from "./CreateAccount"
 import { Jobform } from "./Jobform"
 import { Joblist } from "./Joblist"
 import { Signin } from "./Signin"
+import { SetStateAction } from "react"
+import { useEffect, memo } from "react"
 
-export const GameDisplay = (props: {
+export const GameDisplay = memo((props: {
   gameState: number,
-  setGameState: React.Dispatch<React.SetStateAction<number>>,
+  setGameState: React.Dispatch<SetStateAction<number>>,
   pageColor: string,
   icon: string,
   banner: string,
   jobTitle: string,
   jobDesc: string,
-  jobType: string
+  jobType: string,
+  setShowTimer: React.Dispatch<SetStateAction<boolean>>,
+  updateScore: () => void
 }) => {
+
+  useEffect(() => {
+    return () => {
+      props.setShowTimer(false)
+    }
+  }, [])
   return (
     <>
       <Navbar pageColor={props.pageColor} icon={props.icon} />
@@ -47,8 +57,10 @@ export const GameDisplay = (props: {
         <Jobform
           pageColor={props.pageColor}
           colorType={props.jobType}
+          updateScore={props.updateScore}
         />
       }
     </>
   )
-}
+})
+
