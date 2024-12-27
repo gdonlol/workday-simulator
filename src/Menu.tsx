@@ -6,7 +6,6 @@ export const Menu = (props: {
   setGameState: React.Dispatch<SetStateAction<number>>
   setRunTimer: React.Dispatch<SetStateAction<boolean>>
   setCurrTime: React.Dispatch<SetStateAction<number>>
-  setSubmit: React.Dispatch<SetStateAction<boolean>>
   score: number
 }) => {
 
@@ -44,7 +43,6 @@ export const Menu = (props: {
                 props.setGameState(0)
                 props.setCurrTime(0)
                 props.setShowTimer(true)
-                props.setSubmit(false)
                 window.setTimeout(() => {
                   props.setRunTimer(true)
                   navigate("/game")
@@ -86,7 +84,6 @@ export const Menu = (props: {
               props.setGameState(0)
               props.setCurrTime(0)
               props.setShowTimer(true)
-              props.setSubmit(false)
               window.setTimeout(() => {
                 props.setRunTimer(true)
                 navigate("/game")
