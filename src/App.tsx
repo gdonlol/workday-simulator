@@ -25,14 +25,16 @@ function App() {
 
   {/* memorize this and trigger a useEffect to prevent unnecessary re-renders */ }
   const updateScore = useCallback(() => {
-    setSubmit(old => !old)
+    setSubmit(true)
   }, [])
 
   useEffect(() => {
-    setScore(currTime)
-    setRunTimer(false)
-    setShowTimer(false)
-    navigate("../")
+    if (submit) {
+      setScore(currTime)
+      setRunTimer(false)
+      setShowTimer(false)
+      navigate("/")
+    }
   }, [submit])
 
   useEffect(() => {
@@ -88,6 +90,7 @@ function App() {
             setRunTimer={setRunTimer}
             setCurrTime={setCurrTime}
             score={score}
+            setSubmit={setSubmit}
           />
         } />
         <Route path="game" element={
