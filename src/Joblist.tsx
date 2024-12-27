@@ -12,7 +12,7 @@ export const Joblist = (props: {
 }) => {
 
   const [showPanel, setShowPanel] = useState(false);
-  const [fakeId, setFakeId] = useState(() => {
+  const [fakeId] = useState(() => {
     return (Math.random() * 100000).toFixed(0);
   });
 
