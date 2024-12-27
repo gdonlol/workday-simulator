@@ -103,8 +103,12 @@ function App() {
             setShowTimer={setShowTimer}
             updateScore={updateScore}
           />
-        }>
-        </Route>
+        } />
+        <Route path="*" element={
+          <div>
+            <h1>404.</h1>
+          </div>
+        } />
 
       </Routes>
     </>
