@@ -1,7 +1,7 @@
 import './css/Forms.css'
 import './css/App.css'
 import './css/Menu.css'
-import { Routes, Route, useNavigate } from 'react-router'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import { Menu } from './Menu'
 import { GameDisplay } from './GameDisplay'
 import { useEffect, useState, useRef, useCallback } from 'react'
@@ -81,7 +81,7 @@ function App() {
       }
       <Routes>
 
-        <Route index element={
+        <Route path="/" element={
           <Menu
             setShowTimer={setShowTimer}
             setGameState={setGameState}
